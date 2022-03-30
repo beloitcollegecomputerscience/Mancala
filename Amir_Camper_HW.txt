@@ -1,0 +1,5 @@
+Amir Camper
+
+Team: GUI
+Issues: Meet with the Animation team, 
+	Create a interface for the game
