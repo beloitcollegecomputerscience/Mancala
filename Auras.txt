@@ -1,0 +1,3 @@
+Name: Auras Khanal
+Team: Internal Data Structures
+Issue: Start working on the individual classes and methods
