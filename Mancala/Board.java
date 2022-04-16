@@ -43,6 +43,10 @@ public abstract class Board {
 	int getCols() {
 		return board[0].length;
 	}
+	
+	int getTotalSeeds() {
+		return totalSeeds;
+	}
 
 }
 

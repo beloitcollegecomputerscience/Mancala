@@ -5,8 +5,37 @@ public abstract class GameType {
 	Board board;
 //	MakeMove move; // planned abstract type
 	MakeCapture capture;
-//	CheckForWin win; // planned abstract type
+	CheckForWin win;
 //	CheckForDraw draw; // planned abstract type
+	Player player1;
+	Player player2;
+	
+	void switchPlayer() {
+		if (player1.isCurrentPlayer() ) {
+			player1.setPlayerStatus(false);
+			player2.setPlayerStatus(true);
+		} else {
+			player2.setPlayerStatus(false);
+			player1.setPlayerStatus(true);
+		}
+	}
+	
+	Player getCurrentPlayer() {
+		if (player1.isCurrentPlayer()) {
+			return player1;
+		} else {
+			return player2;
+		}
+	}
+	
+	void makeCapture(int row, int col) {
+		int captureCount = 0;
+		while (capture.checkForCaptureCondition(board, row, col)) {
+			captureCount += capture.collectSeeds(board, row, col);
+			getCurrentPlayer().addToNumCapturedSeeds(captureCount);
+			
+		}
+	}
 	
 	void playGame() {
 		System.out.println("Playing Game");
@@ -16,15 +45,12 @@ public abstract class GameType {
 		board.setSeedCount(0,3,3);
 		System.out.println("Boardf:");
 		board.printBoard();
-		System.out.println ( "can capture?: " + capture.checkForCaptureCondition(board, 0, 3));
 		int row = 0;
 		int col = 0;
-		int captureCount = 0;
-		while (capture.checkForCaptureCondition(board, row, col)) {
-			captureCount += capture.collectSeeds(board, row, col);
+		while ( win.checkForWinCondition(board, player1, player2) == false )  {
+			makeMove();
+			makeCapture(row, col);
 		}
-		System.out.println("capture count: " + captureCount);
-//		capture.collectSeeds();
 	}
 
 	abstract void makeMove();

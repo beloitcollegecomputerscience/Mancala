@@ -2,8 +2,8 @@ package Mancala;
 
 public class Player {
 	
-	int numCapturedSeeds;
-	boolean isCurrentPlayer;
+	private int numCapturedSeeds;
+	private boolean isCurrentPlayer;
 	
 	Player() {
 		this.numCapturedSeeds = 0;
@@ -21,7 +21,7 @@ public class Player {
 		this.numCapturedSeeds += newSeeds;
 	}
 	
-	boolean checkIfCurrentPlayer() {
+	boolean isCurrentPlayer() {
 		return isCurrentPlayer;
 	}
 	
