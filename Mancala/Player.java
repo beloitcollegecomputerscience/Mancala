@@ -2,11 +2,13 @@ package Mancala;
 
 public class Player {
 	
+	private int playerNum;
 	private int numCapturedSeeds;
 	private boolean isCurrentPlayer;
 	
-	Player() {
+	Player(int playerNum) {
 		this.numCapturedSeeds = 0;
+		this.playerNum = playerNum;
 	}
 	
 	int getNumCapturedSeeds() {
@@ -22,11 +24,15 @@ public class Player {
 	}
 	
 	boolean isCurrentPlayer() {
-		return isCurrentPlayer;
+		return this.isCurrentPlayer;
 	}
 	
 	void setPlayerStatus(boolean isCurrentPlayer) {
 		this.isCurrentPlayer = isCurrentPlayer;
+	}
+	
+	int getPlayerNum() {
+		return this.playerNum;
 	}
 
 }

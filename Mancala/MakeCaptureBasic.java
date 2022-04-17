@@ -6,7 +6,7 @@ public class MakeCaptureBasic implements MakeCapture {
 	/** Base case will always be 0. Use add on decorators / classes. */
 	public int collectSeeds(Board board, int rowPos, int colPos) {
 		// TODO Auto-generated method stub
-		System.out.println("I can make a Basic Capture");
+		System.out.println("End of Seed Collection at row " + rowPos + " col " + colPos);
 		return 0;
 	}
 
@@ -14,6 +14,7 @@ public class MakeCaptureBasic implements MakeCapture {
 	@Override
 	public boolean checkForCaptureCondition(Board board, int rowPos, int colPos) {
 		// TODO Auto-generated method stub
+		System.out.println("End of Capture Condition Check at row " + rowPos + " col " + colPos);
 		return false;
 	}
 

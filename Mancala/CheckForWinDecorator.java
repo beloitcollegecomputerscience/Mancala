@@ -9,7 +9,7 @@ public class CheckForWinDecorator implements CheckForWin {
 	}
 
 	@Override
-	public boolean checkForWinCondition(Board board, Player player1, Player player2) {
+	public boolean checkForWinCondition(Board board, Player currentPlayer) {
 		// TODO Auto-generated method stub
 		return false;
 	}

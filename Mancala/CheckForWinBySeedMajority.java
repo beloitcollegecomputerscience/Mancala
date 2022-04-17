@@ -6,18 +6,12 @@ public class CheckForWinBySeedMajority extends CheckForWinDecorator {
 		super(c);
 	}
 	
-	public boolean checkForWinCondition(Board board, Player player1, Player player2) {
+	public boolean checkForWinCondition(Board board, Player currentPlayer) {
 		// TODO Auto-generated method stub
-		if (player1.isCurrentPlayer()) {
-			if (player1.getNumCapturedSeeds() > (board.getTotalSeeds() / 2)) {
+			if (currentPlayer.getNumCapturedSeeds() > (board.getTotalSeeds() / 2)) {
 				return true;
 			}
-		} else {
-			if (player2.getNumCapturedSeeds() > (board.getTotalSeeds() / 2)) {
-				return true;
-			}
-		}
-		return (this.checkForWin.checkForWinCondition(board, player1, player2)|| false);
+		return (this.checkForWin.checkForWinCondition(board, currentPlayer)|| false);
 	}
 
 }

@@ -10,6 +10,10 @@ public class WariGame extends GameType {
 	WariGame() {
 		board = new BoardWithNoCaptureHoles(2,6,48);
 		capture = new MakeCaptureOfTwos (new MakeCaptureOfThrees(new MakeCaptureBasic()));
+		win = new CheckForWinByCantFillEmptyRow (new CheckForWinBySeedMajority( new CheckForWinBasic()));
+		player1 = new Player(1);
+		player2 = new Player(2);
+		
 	}
 	
 	void makeMove() {
