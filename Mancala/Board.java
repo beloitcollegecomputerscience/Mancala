@@ -55,6 +55,10 @@ public abstract class Board {
 		}
 		return toReturn;
 	}
+	
+	void setWholeBoard(int[][] board) {
+		this.board = board;
+	}
 
 }
 

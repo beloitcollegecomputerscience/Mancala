@@ -56,12 +56,12 @@ public abstract class GameType {
 		player1.setPlayerStatus(true);
 		int row = 0;
 		int col = 3;
-		while ( win.checkForWinCondition(board, getCurrentPlayer() ) == false )  {
+//		while ( win.checkForWinCondition(board, getCurrentPlayer() ) == false )  {
 //			makeMove();
 			// need way to store place where move stopped and put it into makeCapture
 			makeCapture(row, col);
 			row = switchPlayerAndRow();
-		}
+//		}
 	}
 
 	abstract void makeMove();
