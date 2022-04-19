@@ -16,10 +16,10 @@ public class WariGame extends GameType {
 		
 	}
 	
-	void makeMove() {
+	int[] makeMove(int currentRow) {
 		int numBeans;
 		int pointer;
-		int currentRow = 0; //Temporarily just assuming the person is first row
+		//int currentRow = 0; //Temporarily just assuming the person is first row
 		
 		System.out.println("What hole would you like to move?");
 		int userInput = scnr.nextInt();
@@ -45,6 +45,7 @@ public class WariGame extends GameType {
 			numBeans--;
 		}
 		board.printBoard();
+		return new int[] {currentRow, pointer};
 	}
 
 }

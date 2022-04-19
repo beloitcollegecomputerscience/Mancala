@@ -25,14 +25,17 @@ class MakeCaptureTests {
 	void testCheckForWinConditionWari() {	
 		GameType game = new WariGame();
 		game.board.setUpBoard();
+		
 		// No capture can be made
-		assertFalse( game.capture.checkForCaptureCondition(game.board, 0, 0));
+		assertFalse( game.capture.checkForCaptureCondition(game.board, 0, 0) );
+		
 		// can capture two seeds
 		game.board.setSeedCount(0, 0, 2);
-		assertTrue(game.capture.checkForCaptureCondition(game.board, 0, 0));
+		assertTrue( game.capture.checkForCaptureCondition(game.board, 0, 0) );
+		
 		//can capture three seeds
 		game.board.setSeedCount(0,0,3);
-		assertTrue( game.capture.checkForCaptureCondition(game.board, 0,0));
+		assertTrue( game.capture.checkForCaptureCondition(game.board, 0, 0) );
 	}
 	
 	@Test
@@ -40,14 +43,17 @@ class MakeCaptureTests {
 	void testCollectSeedsWari() {	
 		GameType game = new WariGame();
 		game.board.setUpBoard();
+		
 		// No seeds collected
-		assertEquals(0, game.capture.collectSeeds(game.board, 0, 0));
+		assertEquals( 0, game.capture.collectSeeds(game.board, 0, 0) );
+		
 		// two seeds collected
 		game.board.setSeedCount(0, 0, 2);
-		assertEquals(2,game.capture.collectSeeds(game.board, 0, 0));
+		assertEquals( 2, game.capture.collectSeeds(game.board, 0, 0) );
+		
 		// three seeds collected 
 		game.board.setSeedCount(0,0,3);
-		assertEquals(3, game.capture.collectSeeds(game.board, 0,0));
+		assertEquals( 3, game.capture.collectSeeds(game.board, 0, 0) );
 	}
 	
 	//-------------- Testing Methods in Concrete Classes extending Make Capture ---------------------//

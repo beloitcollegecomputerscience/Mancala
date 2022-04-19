@@ -1,5 +1,7 @@
 package Mancala;
 
+/** TODO: Make checkForWinCondition test for CheckForWinByCuttingOffTheHead */
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import Mancala.CheckForWinByCantFillEmptyRow.State;
 
 class CheckForWinTests {
+	
 	
 
 	//-------------- Testing Abstract Methods in checkForWin for Different Games ---------------------//

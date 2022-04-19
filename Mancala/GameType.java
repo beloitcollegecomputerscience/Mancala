@@ -10,13 +10,13 @@ package Mancala;
 
 public abstract class GameType {
 	
-	Board board;
+	Board board; // should we have pointers in the board class?
 //	MakeMove move; // planned abstract type
 	MakeCapture capture;
 	CheckForWin win;
 //	CheckForDraw draw; // planned abstract type
-	Player player1;
-	Player player2;
+	Player player1; // should we have pointers in the player class?
+	Player player2; // should we have pointers in the player class?
 	
 	int switchPlayerAndRow() {
 		if (player1.isCurrentPlayer() ) {
@@ -38,6 +38,14 @@ public abstract class GameType {
 		}
 	}
 	
+	Player getOtherPlayer() {
+		if (player1.isCurrentPlayer()) {
+			return player2;
+		} else {
+			return player1;
+		}
+	}
+	
 	/** TODO: make better name */
 	void makeCapture(int row, int col) {
 		int captureCount = 0;
@@ -56,15 +64,21 @@ public abstract class GameType {
 		player1.setPlayerStatus(true);
 		int row = 0;
 		int col = 3;
-//		while ( win.checkForWinCondition(board, getCurrentPlayer() ) == false )  {
-//			makeMove();
+		while ( win.checkForWinCondition(board, getOtherPlayer() ) == false )  {
+			System.out.println("Player " + getCurrentPlayer().getPlayerNum() + "'s turn.");
+			int[] rowAndCol = makeMove(row);
 			// need way to store place where move stopped and put it into makeCapture
-			makeCapture(row, col);
+			System.out.println("make move return: " + rowAndCol[0] + "," + rowAndCol[1]);
+			System.out.println("get other player num return: " + getOtherPlayer().getPlayerNum());
+			if (rowAndCol[0] == getOtherPlayer().getPlayerNum() - 1) {
+				makeCapture(getOtherPlayer().getPlayerNum() - 1, rowAndCol[1]);
+			}
 			row = switchPlayerAndRow();
-//		}
+			System.out.println();
+		}
 	}
 
-	abstract void makeMove();
+	abstract int[] makeMove(int currentRow);
 	
 	
 
