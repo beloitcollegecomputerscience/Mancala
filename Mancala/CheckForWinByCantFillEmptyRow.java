@@ -6,7 +6,7 @@ public class CheckForWinByCantFillEmptyRow extends CheckForWinDecorator {
 	  * 				  	  NOT_EMPTY -> NOT_EMPTY <br>
 	  * 				      BEFORE_MOVE_EMPTY -> NOT_EMPTY <br>
 	  * 				      BEFORE_MOVE_EMPTY ->  win */
-	 enum State { NOT_EMPTY, BEFORE_MOVE_EMPTY, AFTER_MOVE_EMPTY }
+	 enum State { NOT_EMPTY, BEFORE_MOVE_EMPTY}
 	 State state;
 	
 	public CheckForWinByCantFillEmptyRow(CheckForWin c) {
@@ -70,6 +70,7 @@ public class CheckForWinByCantFillEmptyRow extends CheckForWinDecorator {
 		return true;
 	
 	}
+	
 
 }
 
