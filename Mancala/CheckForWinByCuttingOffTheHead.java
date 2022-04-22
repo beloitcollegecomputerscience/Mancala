@@ -1,5 +1,10 @@
 package Mancala;
 
+/**
+ * Checks to see if a player has won due to the game rule "cutting off the head".
+ * In games: Wari
+ */
+
 public class CheckForWinByCuttingOffTheHead extends CheckForWinDecorator {
 	
 

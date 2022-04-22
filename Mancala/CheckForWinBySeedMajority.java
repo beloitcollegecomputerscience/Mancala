@@ -1,5 +1,10 @@
 package Mancala;
 
+/**
+ * Checks if a player has won due to having a majority of seeds.
+ * In games: Wari
+ */
+
 public class CheckForWinBySeedMajority extends CheckForWinDecorator {
 	
 	public CheckForWinBySeedMajority(CheckForWin c) {

@@ -1,5 +1,11 @@
 package Mancala;
 
+/**
+ * Checks to see if a player has won due to a player being unable to put any stones in the other player's
+ * currently all empty holes.
+ * In games: Wari
+ */
+
 public class CheckForWinByCantFillEmptyRow extends CheckForWinDecorator {
 	
 	 /** State Movements:<br> NOT_EMPTY -> BEFORE_MOVE_EMPTY <br>

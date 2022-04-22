@@ -1,6 +1,7 @@
 package Mancala;
 
 /** A class that checks for the board for two seeds and returns 2 as captured seed amount.
+ * In games: Wari
  */
 
 public class MakeCaptureOfTwos extends MakeCaptureDecorator{

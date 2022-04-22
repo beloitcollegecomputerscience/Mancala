@@ -1,6 +1,12 @@
 
 package Mancala;
 
+/**
+ * Base case for capturing seeds.
+ * 
+ *
+ */
+
 public class MakeCaptureBasic implements MakeCapture {
 
 	/** Base case will always be 0. Use add on decorators / classes. */
