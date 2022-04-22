@@ -17,6 +17,7 @@ public abstract class GameType {
 //	CheckForDraw draw; // planned abstract type
 	Player player1; // should we have pointers in the player class?
 	Player player2; // should we have pointers in the player class?
+					// should player class and board class be combined?
 	
 	int switchPlayerAndRow() {
 		if (player1.isCurrentPlayer() ) {
@@ -64,21 +65,17 @@ public abstract class GameType {
 		player1.setPlayerStatus(true);
 		int row = 0;
 		int col = 3;
-		while ( win.checkForWinCondition(board, getOtherPlayer() ) == false )  {
-			System.out.println("Player " + getCurrentPlayer().getPlayerNum() + "'s turn.");
-			int[] rowAndCol = makeMove(row);
+		while ( win.checkForWinCondition(board, getCurrentPlayer() ) == false )  {
+			/*int[] rowAndCol = */ makeMove();
 			// need way to store place where move stopped and put it into makeCapture
-			System.out.println("make move return: " + rowAndCol[0] + "," + rowAndCol[1]);
-			System.out.println("get other player num return: " + getOtherPlayer().getPlayerNum());
-			if (rowAndCol[0] == getOtherPlayer().getPlayerNum() - 1) {
-				makeCapture(getOtherPlayer().getPlayerNum() - 1, rowAndCol[1]);
-			}
+//			if (rowAndCol[0] == getCurrentPlayer().getPlayerNum() - 1) {
+				makeCapture(row, col);
+//			}
 			row = switchPlayerAndRow();
-			System.out.println();
 		}
 	}
 
-	abstract int[] makeMove(int currentRow);
+	abstract void makeMove();
 	
 	
 
