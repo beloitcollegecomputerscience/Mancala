@@ -1,5 +1,11 @@
 package Mancala;
 
+/**
+ * A class for games such that's board does include holes on the side. 
+ * It sets up the board and stores how many seeds are in each hole.
+ *
+ */
+
 public class BoardWithCaptureHoles extends Board {
 
 	BoardWithCaptureHoles(int rows, int cols, int totalSeeds) {

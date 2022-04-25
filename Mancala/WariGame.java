@@ -3,6 +3,12 @@ package Mancala;
 
 import java.util.Scanner;
 
+/**
+ * Manages and runs the game Wari. It instantiates each class to fit the rules of Wari.
+ * It also includes makeMove() which moves the stones in the hole 'clicked' on according to Wari's rules.
+ *
+ */
+
 public class WariGame extends GameType {
 	
 	static Scanner scnr = new Scanner(System.in); // Scanner will get replaced by GUI
@@ -10,6 +16,10 @@ public class WariGame extends GameType {
 	WariGame() {
 		board = new BoardWithNoCaptureHoles(2,6,48);
 		capture = new MakeCaptureOfTwos (new MakeCaptureOfThrees(new MakeCaptureBasic()));
+		win = new CheckForWinBySeedMajority( new CheckForWinBasic());
+		player1 = new Player(1);
+		player2 = new Player(2);
+		
 	}
 	
 	void makeMove() {

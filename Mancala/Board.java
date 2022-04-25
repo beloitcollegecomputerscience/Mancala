@@ -43,6 +43,22 @@ public abstract class Board {
 	int getCols() {
 		return board[0].length;
 	}
+	
+	int getTotalSeeds() {
+		return totalSeeds;
+	}
+	
+	int[] getRow(int rowNum) {
+		int[] toReturn = new int[board[0].length];
+		for (int i = 0; i < board[0].length; i++) {
+			toReturn[i] = board[rowNum][i];
+		}
+		return toReturn;
+	}
+	
+	void setWholeBoard(int[][] board) {
+		this.board = board;
+	}
 
 }
 

@@ -4,6 +4,11 @@ package Mancala;
 /** <p> Acts as interface to use any type of Capture method / condition. 
  * 	Allows for giving one field multiple conditions when instantiating a game object
  *  without creating large branching if-else statements. </p>
+ *  
+ *  <p>Requirements: <br> When making the objects from current list of usable classes, make sure to have
+ *  {@link MakeCaptureBasic} in the innermost part of the nest. <br>
+ *   Example: capture = new MakeCaptureOfTwos( new MakeCaptureBasic); <br>
+ *   Must use one of the classes in Current list of usable classes below. </p>
  *
  *<p> Current list of usable classes:  <br>
  * {@link MakeCaptureOfTwos}, <br>

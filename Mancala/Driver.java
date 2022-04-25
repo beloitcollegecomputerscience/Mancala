@@ -25,7 +25,8 @@ public class Driver {
 			return new WariGame();
 		default:
 			System.out.println("Please enter a valid game type");
-			return null;
+			type = getUserInput("What type of Mancala Game would you like to play?");
+			return getGameType(type);
 		}
 	}
 	
@@ -42,7 +43,6 @@ public class Driver {
 		
 		while(keepGoing.equals("yes")) {
 			game.playGame();
-			game.makeMove();
 			keepGoing = getUserInput("Would you like to play again? Type yes or no.");
 			if (keepGoing.equals("no")) {
 				break;
