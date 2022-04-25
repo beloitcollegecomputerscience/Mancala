@@ -1,5 +1,11 @@
 package Mancala;
 
+/**
+ * A class for games such as Wari that's board does not include holes on the side. 
+ * It sets up the board and stores how many seeds are in each hole.
+ *
+ */
+
 public class BoardWithNoCaptureHoles extends Board{
 
 	BoardWithNoCaptureHoles(int rows, int cols, int totalSeeds) {

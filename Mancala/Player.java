@@ -1,5 +1,10 @@
 package Mancala;
 
+/**
+ * Object representing a player, meant for there to be two of this instantiated per game.
+ * It stores the number of captured seeds and whether or not it is this player's turn.
+ */
+
 public class Player {
 	
 	private int playerNum;

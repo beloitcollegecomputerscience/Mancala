@@ -3,6 +3,7 @@ package Mancala;
 
 /**
  * A class that checks for the board for three seeds and returns 3 as captured seed amount.
+ * In games: Wari
  */
 
 public class MakeCaptureOfThrees extends MakeCaptureDecorator {
