@@ -13,7 +13,7 @@ public abstract class GameType {
 	Board board; // should we have pointers in the board class?
 //	MakeMove move; // planned abstract type
 	MakeCapture capture;
-	CheckForWin win;
+	CheckForWin win; // Should there be a print win message (like return who won for what reason?)
 //	CheckForDraw draw; // planned abstract type
 	Player player1; // should we have pointers in the player class?
 	Player player2; // should we have pointers in the player class?
