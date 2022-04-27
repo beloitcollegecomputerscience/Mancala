@@ -1,2 +1,14 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-myCircle:hover{-fx-background-color: #6695e2}
+.root {
+	-fx-background-color:"White";
+}
+
+Circle:hover{
+
+-fx-fill:#e9f542;
+
+
+}
+.rectangleMancalaHole:hover {
+	-fx-fill:#e9f542;
+}
