@@ -1,7 +1,7 @@
 # Mancala User Manual
 ## Software Manual, April 2022
 ### How to Play
-Will be adding game rules soon
+Players pick up and move the seeds in one of the pits nearest to them in a counter clockwise direction around the board placing a seed in each hole that is passed over. The store on your right belongs to you; this is where you keep the seeds you win. Players can win seeds by dropping seeds in their store as they pass over it or by capturing the opponent’s seeds.
 ### Log In
 This feature allows for the user to save their high scores
 ### Objective of the Game
