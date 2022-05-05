@@ -12,7 +12,7 @@ public class WariBoard extends Board{
 	public void printBoard() {
 		for (int row=1; row < 3; row++ ){
 	          if (row==1){
-	              for (int i =0; i<playboard.length/2; i++){
+	              for (int i =5; i>-1; i--){
 	                  System.out.print(playboard[i]+ ", ");
 	              }
 	          }
