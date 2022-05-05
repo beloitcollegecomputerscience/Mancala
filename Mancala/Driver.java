@@ -1,4 +1,5 @@
 package Mancala;
+import java.util.Scanner;
 
 /** This is a temporary driver for code development purposes. 
  * 
@@ -7,7 +8,6 @@ package Mancala;
  * - 
  * - */
 
-import java.util.Scanner;
 
 public class Driver {
 	
@@ -25,8 +25,7 @@ public class Driver {
 			return new WariGame();
 		default:
 			System.out.println("Please enter a valid game type");
-			type = getUserInput("What type of Mancala Game would you like to play?");
-			return getGameType(type);
+			return null;
 		}
 	}
 	

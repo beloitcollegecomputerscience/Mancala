@@ -1,71 +1,15 @@
 package Mancala;
-import java.util.Arrays;
-
-/** 
- * <p> An abstract class for implementing different types of boards </p>
- * 
- * <p> Current list of useable classes / boards <br>
- *	   {@link BoardWithCaptureHoles} <br>
- *	   {@link BoardWithCaptureHoles}
- *  </p>
- *
- */
-
+//the standard board class whose attributes and methods are common to all mancala game types
 public abstract class Board {
-	
-	int[] board;
-//	int totalSeeds;
-	
-	Board(int size, int seeds) {
-		board = new int[size];
-		Arrays.fill(board, seeds);
+	int[] playboard;
+//	to set up the board based on the game we are playing
+	public abstract void setupBoard();
+// to get the board of the game 
+	public abstract int[] getBoard();
+//	prints the board array and shows how many seeds are there throughout the board
+	public abstract void printBoard();
+//	returns the seed count in a provided index
+	public int getSeedCount(int chosenindex) {
+		return playboard[chosenindex];
 	}
-	
-//	abstract void setUpBoard();
-	
-	void printBoard() {
-		for (int row=1; row < 3; row++ ){
-	          if (row==1){
-	              for (int i =0; i<board.length/2; i++){
-	                  System.out.print(board[i]+ ", ");
-	              }
-	          }
-	          else if (row==2){
-	              for (int i =6;i<board.length; i++){
-	                  System.out.print(board[i]+", ");
-	              }
-	          }
-	          System.out.println();
-	      }
-	}
-	
-	int getSeedCount(int row, int col) {
-		return board[row][col];
-	}
-//	 it is altering the number of seeds in a particular hole
-	void setSeedCount(int row, int col, int num) {
-		board[row][col] = num;
-	}
-	
-	int getCols() {
-		return board[0].length;
-	}
-	
-	int getTotalSeeds() {
-		return totalSeeds;
-	}
-	
-	int[] getRow(int rowNum) {
-		int[] toReturn = new int[board[0].length];
-		for (int i = 0; i < board[0].length; i++) {
-			toReturn[i] = board[rowNum][i];
-		}
-		return toReturn;
-	}
-	
-	void setWholeBoard(int[][] board) {
-		this.board = board;
-	}
-
 }
-
