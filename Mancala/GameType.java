@@ -1,7 +1,8 @@
 package Mancala;
-//import java.util.Scanner;
+import java.util.Scanner;
 //abstract class that all the different Mancala Game Types extend
 public abstract class GameType {
+	Scanner sc = new Scanner(System.in);
 	Board board;
 	MakeMove makemove;
 	CollectSeeds makecapture;
@@ -11,14 +12,19 @@ public abstract class GameType {
 	boolean draw;
 	boolean capture;
 	int indexchosen;
-
+	
 	public void playGame() {
 		board.setupBoard();
-		board.printBoard();
+//		board.printBoard();
+
 //		System.out.println(board.getSeedCount(2));
 //		System.out.println(board.playboard[5]=0);
 //		while there is no winner and the game is not a draw
 		while (!winner || !draw){
+			board.printBoard();
+			System.out.println(makecapture.totalseedscollected);
+			System.out.println("Enter a hole index");
+			indexchosen= sc.nextInt();
 //			make a move from a chosen index, which returns a boolean value, true if the hole it lands on has 2 or 3 seeds and false if not
 			capture=makemove.movefrom(board, indexchosen);
 //			if the hole landed on has 2 or 3 seeds, we collect the seeds 
@@ -28,8 +34,10 @@ public abstract class GameType {
 //			after collection checks to see if there is a winner or if its a draw
 			winner=checkforwin.someonewon(board, makecapture.totalseedscollected);	
 			draw=checkfordraw.drawngame(board, makecapture.totalseedscollected);
+
 		}
 		
+
 	}
 				
 }

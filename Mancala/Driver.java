@@ -1,4 +1,5 @@
 package Mancala;
+import java.util.Scanner;
 
 /** This is a temporary driver for code development purposes. 
  * 
@@ -7,7 +8,6 @@ package Mancala;
  * - 
  * - */
 
-import java.util.Scanner;
 
 public class Driver {
 	
