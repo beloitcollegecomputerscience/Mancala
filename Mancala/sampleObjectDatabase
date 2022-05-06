@@ -1,0 +1,239 @@
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane; 
+import javafx.stage.Stage;  
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text; 
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+
+
+public class Main extends Application {
+	public int C1 = 4;
+	public int C2 = 4;
+	public int P2 = 0;
+	public int C3 = 4;
+	public int C4 = 4;
+	public int C5 = 4;
+	public int C6 = 4;
+	public int C7 = 4;
+	public int C8 = 4;
+	public int C9 = 4;
+	public int C10 = 4;
+	public int C11 = 4;
+	public int C12 = 4;
+	public int P1 = 0;
+	
+	@Override
+	public void start(Stage primaryStage) {
+		GridPane gridPane = new GridPane();
+		gridPane.setPadding(new Insets(10, 10, 10, 10));
+		gridPane.setVgap(0.3); 
+		gridPane.setHgap(6);
+		gridPane.setAlignment(Pos.CENTER);
+
+		//The side of each player
+		Rectangle rectangleP1 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		Rectangle rectangleP2 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		Rectangle rectangleP2P3 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		Rectangle rectangleP1P3 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		Rectangle rectangleP1P2 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		Rectangle rectangleP2P2 = new Rectangle(150.0f, 75.0f, 80.0f, 100.0f);
+		//Player 1 Sides
+		Circle circle1 = new Circle(20, 20, 50);
+		Circle circle2 = new Circle(20, 20, 50);
+		Circle circle3 = new Circle(20, 20, 50);
+		Circle circle4 = new Circle(20, 20, 50);
+		Circle circle5 = new Circle(20, 20, 50);
+		Circle circle6 = new Circle(20, 20, 50);
+		//Player 2 Sides
+		Circle circle7 = new Circle(20, 20, 50);
+		Circle circle8 = new Circle(20, 20, 50);
+		Circle circle9 = new Circle(20, 20, 50);
+		Circle circle10 = new Circle(20, 20, 50);
+		Circle circle11 = new Circle(20, 20, 50);
+		Circle circle12 = new Circle(20, 20, 50);
+
+		//Main Label for the game
+		Label MainLabel = new Label("   Mancala");
+		MainLabel.setFont(Font.font("Cambria", 20));
+		MainLabel.setWrapText(false);
+
+
+		Text P1N = new Text();
+		P1N.setText("           " + String.valueOf(P1));
+		P1N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text P2N = new Text();
+		P2N.setText("           " + String.valueOf(P2));
+		P2N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C1N = new Text();
+		C1N.setText("           " + String.valueOf(C1));
+		C1N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C2N = new Text();
+		C2N.setText("           " + String.valueOf(C2));
+		C2N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C3N = new Text();
+		C3N.setText("           " + String.valueOf(C3));
+		C3N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C4N = new Text();
+		C4N.setText("           " + String.valueOf(C4));
+		C4N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C5N = new Text();
+		C5N.setText("           " + String.valueOf(C5));
+		C5N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C6N = new Text();
+		C6N.setText("           " + String.valueOf(C6));
+		C6N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C7N = new Text();
+		C7N.setText("           " + String.valueOf(C7));
+		C7N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C8N = new Text();
+		C8N.setText("           " + String.valueOf(C8));
+		C8N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C9N = new Text();
+		C9N.setText("           " + String.valueOf(C9));
+		C9N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C10N = new Text();
+		C10N.setText("           " + String.valueOf(C10));
+		C10N.setFill(Color.ANTIQUEWHITE);
+
+		
+		Text C11N = new Text();
+		C11N.setText("           " + String.valueOf(C11));
+		C11N.setFill(Color.ANTIQUEWHITE);
+
+	
+		Text C12N = new Text();
+		C12N.setText("           " + String.valueOf(C12));
+		C12N.setFill(Color.ANTIQUEWHITE);
+
+		//Buttons for the choosing
+		Button first = new Button("Circle 1"); 
+		first.setMaxSize(100, 200);
+
+		Button second = new Button("Circle 2"); 
+		second.setMaxSize(100, 200);
+
+		Button third = new Button("Circle 3"); 
+		third.setMaxSize(100, 200);
+
+		Button fourth = new Button("Circle 4"); 
+		fourth.setMaxSize(100, 200);
+
+		Button fifth = new Button("Circle 5"); 
+		fifth.setMaxSize(100, 200);
+
+		Button sixth = new Button("Circle 6"); 
+		sixth.setMaxSize(100, 200);
+
+		Button seventh = new Button("Circle 7"); 
+		seventh.setMaxSize(100, 200);
+
+		Button eighth = new Button("Circle 8"); 
+		eighth.setMaxSize(100, 200);
+
+		Button ninth = new Button("Circle 9"); 
+		ninth.setMaxSize(100, 200);
+
+		Button tenth = new Button("Circle 10"); 
+		tenth.setMaxSize(100, 200);
+
+		Button eleventh = new Button("Circle 11"); 
+		eleventh.setMaxSize(100, 200);
+
+		Button twelvth = new Button("Circle 12"); 
+		twelvth.setMaxSize(100, 200);
+		//Locations on the girdPane
+		gridPane.add(MainLabel, 5, 1);
+
+		//Circle 1 items on the grid
+		gridPane.add(circle1, 3, 3);
+		gridPane.add(first, 3, 2);
+
+
+		//Circle 2 on the grid
+		gridPane.add(circle2, 4, 3);
+		gridPane.add(second, 4, 2);
+		//Circle 3 on the grid
+		gridPane.add(circle3, 5, 3);
+		gridPane.add(third, 5, 2);
+		//Circle 4 on the grid
+		gridPane.add(circle4, 6, 3);
+		gridPane.add(fourth, 6, 2);
+		//Circle 5 on the grid
+		gridPane.add(circle5, 7, 3);
+		//gridPane.add(C5, 7, 3);
+		gridPane.add(fifth, 7, 2);
+		//Circle 6 on the grid	
+		gridPane.add(circle6, 8, 3);
+		//gridPane.add(C6, 8, 3);
+		gridPane.add(sixth, 8, 2);
+		//Circle 7 on the grid
+		gridPane.add(circle7, 3, 5);
+		//gridPane.add(C7, 3, 5);
+		gridPane.add(seventh, 3, 6);
+		//Circle 8 on the grid
+		gridPane.add(circle8, 4, 5);
+		//gridPane.add(C8, 4, 5);
+		gridPane.add(eighth, 4, 6);
+		//Circle 9 on the grip
+		gridPane.add(circle9, 5, 5);
+		gridPane.add(ninth, 5, 6);
+
+		gridPane.add(circle10, 6, 5);
+		gridPane.add(tenth, 6, 6);
+
+		gridPane.add(circle11, 7, 5);
+		gridPane.add(eleventh, 7, 6);
+
+		gridPane.add(circle12, 8, 5);
+		gridPane.add(twelvth, 8, 6);
+		//The scoring locations for each player
+		gridPane.add(rectangleP1, 2, 3);
+		gridPane.add(rectangleP1P2, 2, 5);
+		gridPane.add(rectangleP2, 9, 3);
+		gridPane.add(rectangleP2P2, 9, 5);
+		gridPane.add(rectangleP2P3, 9, 4);
+		gridPane.add(rectangleP1P3, 2, 4);
+		//Putting the scores on the sides
+		gridPane.add(P1N, 9, 4);
+		gridPane.add(C1N, 3, 3);
+		gridPane.add(C2N, 4, 3);
+		gridPane.add(C3N, 5, 3);
+		gridPane.add(C4N, 6, 3);
+		gridPane.add(C5N, 7, 3);
+		gridPane.add(C6N, 8, 3);
+
+		gridPane.add(C7N, 3, 5);
+		gridPane.add(C8N, 4, 5);
+		gridPane.add(C9N, 5, 5);
+		gridPane.add(C10N, 6, 5);
+		gridPane.add(C11N, 7, 5);
+		gridPane.add(C12N, 8, 5);
+		gridPane.add(P2N, 2, 4);
