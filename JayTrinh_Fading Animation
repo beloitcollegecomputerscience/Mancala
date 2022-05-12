@@ -1,0 +1,51 @@
+import javafx.animation.AnimationTimer;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+
+public class FadingAnimationTest extends Application {
+	private double opacity = 1;
+	public Label label;
+	
+	public void start (Stage mainstage) {
+		initializeUI(mainstage);
+	}
+	
+	private void initializeUI (Stage mainstage) {
+		StackPane root = new StackPane();
+		//Animation changes the property of this label control
+		label= new Label("Object1 Testing");
+		label.setFont(Font.font(28));
+		root.getChildren().add(label);
+		
+		//Create AnimationTimer method
+		AnimationTimer timer = new MainObjTimer();
+		timer.start();
+		Scene scene = new Scene(root, 300, 250);
+		mainstage.setTitle("Animation Timer Test for Main Object");
+		mainstage.setScene(scene);
+		mainstage.show();
+	}
+	
+	private class MainObjTimer extends AnimationTimer {
+		public void handle(long a) {
+			doHandle();
+		}
+		
+		private void doHandle() {
+			opacity -= 0.003;
+			label.opacityProperty().set(opacity);
+			
+			if (opacity <=0) {
+				stop();
+				System.out.println("Animation ended");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		launch(args);
+	}
+}
